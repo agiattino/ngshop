@@ -1,5 +1,8 @@
-    <h2>
-      {{ title }}!
-    </h2>
+<h2>{{ title }}!</h2>
 
-  <dog *ngFor = "let dog of dogs"  [dog]="dog"></dog>
+<div class="nav-item btn-group-lg" role="group" area-label="Dog Views">
+<button id="favorites"  class="btn btn-primary" (click) = "loadFavorites()">Favorites</button>
+<button class="btn btn-primary" (click)="created()"> All </button> 
+</div>
+
+<dog *ngFor="let dog of dogs" [dog]="dog"></dog>
